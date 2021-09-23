@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import { store } from "../../store/store";
 import theme from "../../styles/Theme.styles";
+
 import Home from "./Home.page";
 function setup() {
 	const utils = render(
@@ -13,14 +14,13 @@ function setup() {
 			</ThemeProvider>
 		</Provider>,
 	);
-
 	const getByText = (text) => screen.getByText(text);
 	const getByLabel = (text) => screen.getByLabelText(text);
 	const write = (element, text) => userEvent.type(element, text);
 	const click = (element) => userEvent.click(element);
 	return { utils, getByLabel, getByText, write, click };
 }
-describe("Home (PAGE)", () => {
+describe("Home", () => {
 	it("Should render Home page form", async () => {
 		const { getByLabel, getByText } = setup();
 		expect(getByLabel("Firstname")).toBeInTheDocument();
@@ -31,5 +31,10 @@ describe("Home (PAGE)", () => {
 		expect(getByText("Create")).toBeInTheDocument();
 		expect(getByText("Create new event")).toBeInTheDocument();
 		cleanup();
+	});
+
+	it("Should display loading", async () => {
+		const { getByText } = setup();
+		expect(getByText("Loading")).toBeInTheDocument();
 	});
 });

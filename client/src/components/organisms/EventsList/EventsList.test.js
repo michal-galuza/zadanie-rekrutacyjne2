@@ -41,7 +41,7 @@ function setup(props = {}) {
 	return { utils, getByText, eventsProps, click, onDelete, onOffsetChange };
 }
 
-describe("EventList (ORGANISM)", () => {
+describe("EventList", () => {
 	it("Should render events list", async () => {
 		const utils = setup();
 		expect(utils.getByText("1")).toBeInTheDocument();

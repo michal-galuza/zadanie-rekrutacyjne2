@@ -22,7 +22,7 @@ function setup(props = {}) {
 	const minutePicker = utils.getByDisplayValue(
 		hourPickerProps.value.split(":")[1],
 	);
-	const changeTime = (optionValue) => {
+	const changeTime = () => {
 		userEvent.selectOptions(hourPicker, "20");
 		userEvent.selectOptions(minutePicker, "50");
 	};
@@ -36,7 +36,7 @@ function setup(props = {}) {
 	};
 }
 
-describe("HourPicker (ATOM)", () => {
+describe("HourPicker", () => {
 	it("Should render hourpicker", async () => {
 		const utils = setup();
 		expect(utils.hourPicker).toBeInTheDocument();

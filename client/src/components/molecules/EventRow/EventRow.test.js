@@ -5,7 +5,7 @@ import theme from "../../../styles/Theme.styles";
 import EventRow from "./EventRow";
 import userEvent from "@testing-library/user-event";
 
-describe("EventRow (MOLECULES)", () => {
+describe("EventRow ", () => {
 	const eventMock = {
 		id: "Random_id",
 		firstname: "Michal",
@@ -25,7 +25,7 @@ describe("EventRow (MOLECULES)", () => {
 		expect(getByText(eventMock.lastname)).toBeInTheDocument();
 		expect(getByText(eventMock.email)).toBeInTheDocument();
 		expect(
-			getByText(moment(eventMock.date).format("DD-MM-YYYY hh:mm")),
+			getByText(moment(eventMock.date).format("DD-MM-YYYY HH:mm")),
 		).toBeInTheDocument();
 		expect(getByText("X")).toBeInTheDocument();
 	});

@@ -21,7 +21,7 @@ function setup(props = {}) {
 	return { buttonMock, onClick, utils, click, getByText };
 }
 
-describe("Button (Atom)", () => {
+describe("Button", () => {
 	it("Should render button", async () => {
 		const utils = setup();
 		const button = utils.getByText();

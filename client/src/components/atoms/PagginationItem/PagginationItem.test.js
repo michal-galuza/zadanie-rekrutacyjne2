@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import PagginationItem from "./PagginationItem";
 import theme from "../../../styles/Theme.styles";
 
-describe("PagginationItem (Atom)", () => {
+describe("PagginationItem", () => {
 	afterEach(cleanup);
 
 	it("Should render PagginationItem", async () => {

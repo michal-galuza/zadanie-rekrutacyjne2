@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../../styles/Theme.styles";
 import Label from "./Label";
 
-describe("Label (ATOM)", () => {
+describe("Label", () => {
 	it("Should render Label", async () => {
 		const { getByText } = render(
 			<ThemeProvider theme={theme}>

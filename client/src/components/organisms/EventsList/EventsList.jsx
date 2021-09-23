@@ -1,6 +1,6 @@
 import { Title } from "../../atoms";
 import { EventRow, Paggination } from "../../molecules";
-import { Wrapper } from "./EventsList.styles";
+import { ScrollWrapper, Wrapper } from "./EventsList.styles";
 
 export default function EventsList({
 	onDelete,
@@ -27,7 +27,7 @@ export default function EventsList({
 						: "Events"
 				}
 			/>
-			<div>
+			<ScrollWrapper>
 				{events.length &&
 					events.map((item, index) => (
 						<EventRow
@@ -37,7 +37,7 @@ export default function EventsList({
 							index={index}
 						/>
 					))}
-			</div>
+			</ScrollWrapper>
 			<Paggination
 				totalCount={totalCount}
 				actual={offset}
