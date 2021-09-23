@@ -17,10 +17,16 @@
 
 # Installation
 
-##### First you need to create .env files in /api
+##### First you need to create .env files
+
+##### in /api
 
 - .env.production
 - .env.development
+
+##### in /client
+
+- .env
 
 ##### ENVS (Backend)
 
